@@ -1,0 +1,418 @@
+/* Modal overlay styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    padding: 2rem 2.5rem;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    animation: popIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.modal-content p {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#close-modal-btn {
+    background: linear-gradient(90deg, #2e8b57 0%, #4caf50 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(46,139,87,0.15);
+    transition: background 0.2s;
+}
+
+#close-modal-btn:hover {
+    background: linear-gradient(90deg, #4caf50 0%, #2e8b57 100%);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+/* Modern trendy header styles */
+html {
+    scroll-behavior: smooth;
+}
+header {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #264653 0%, #ff9800 100%);
+    position: relative;
+    box-shadow: 0 4px 24px rgba(255, 152, 0, 0.10);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+    overflow-x: hidden; /* Ensure no horizontal scroll/gap */
+}
+
+div.tops {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+div.tops p:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 8px #ff9800;
+}
+
+div.tops p:last-child {
+    margin: 0;
+    display: flex;
+    gap: 32px;
+}
+
+div.tops a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 18px;
+    /* transition: background 0.2s, color 0.2s, box-shadow 0.2s; */
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.08);
+    background-color: #2a9d8f;
+    backdrop-filter: blur(2px);
+}
+
+div.tops a:hover, div.tops a:focus {
+    background: #6b9080;
+    /* color: #ff9800; */
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.16);
+}
+
+.about{
+    margin-left: 20px;
+}
+
+
+
+/* ...existing code... */
+
+
+.banner-img-wrapper{
+    position: relative;
+}
+
+img{
+    /* width: 100%; */
+    max-width: 100%;
+    display: block;
+}
+
+.Massage-edit {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+.centered-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    color: black;
+    text-shadow: 2px 2px 8px #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+span{
+    color: orange;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden; /* Prevent horizontal scroll/gap */
+    background-color: lightgray;
+}
+
+.ownership {
+    color: orange;
+}
+.profilistic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.profile-banner {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 4px rgba(0,0,0,0.06);
+    padding: 32px 24px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-banner:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 3px 8px rgba(0,0,0,0.10);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ffa500;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-banner p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.profile-edit {
+    color: #ffa500;
+    text-shadow: 1px 1px 8px #fff;
+    font-size: 20px;
+}
+
+div.info{
+    text-align: center;
+}
+
+.CONTAC {
+    background: linear-gradient(135deg, #fff7e6 0%, #ffe0b2 100%);
+    border-radius: 24px;
+    box-shadow: 0 6px 32px rgba(255, 165, 0, 0.10), 0 2px 8px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 40px auto 60px auto;
+    padding: 36px 32px 28px 32px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ffa500;
+    transition: box-shadow 0.3s;
+}
+
+.CONTAC:hover {
+    box-shadow: 0 12px 48px rgba(255, 165, 0, 0.18), 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.shift {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.CONTAC h1, .CONTAC h2 {
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 18px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.CONTAC label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.CONTAC input[type="text"],
+.CONTAC input[type="email"],
+.CONTAC input[type="phone-number"],
+.CONTAC select,
+.CONTAC textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ffa500;
+    border-radius: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    background: #fffdfa;
+    transition: border 0.2s;
+}
+
+.CONTAC input[type="text"]:focus,
+.CONTAC input[type="email"]:focus,
+.CONTAC input[type="phone-number"]:focus,
+.CONTAC select:focus,
+.CONTAC textarea:focus {
+    border: 2px solid #ff9800;
+    outline: none;
+}
+
+.CONTAC .gender {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+.CONTAC input[type="radio"] {
+    accent-color: #ffa500;
+    margin-right: 4px;
+}
+
+.CONTAC textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.CONTAC input[type="submit"] {
+    background: linear-gradient(90deg, #ffa500 0%, #ff9800 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.CONTAC input[type="submit"]:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ffa500 100%);
+    box-shadow: 0 4px 16px rgba(255, 152, 0, 0.16);
+}
+
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  /* background: #f8f9fa; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.04); */
+  border-radius: 12px;
+  text-align: center;
+}
+
+
+/* * {
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+.fa-square-instagram {
+    font-size: 24px;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-square-whatsapp {
+    font-size: 24px;
+    color: #25d366;
+}
+
+.fa-square-facebook {
+    font-size: 24px;
+    color: #1877f2;
+}
+.icons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        min-height: 60px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    div.tops {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 12px;
+    }
+    div.tops p:last-child {
+        gap: 12px;
+        margin-top: 8px;
+    }
+    div.tops p:first-child {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    .CONTAC {
+        padding: 20px 8px 16px 8px;
+        max-width: 98vw;
+    }
+}
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100vw;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}

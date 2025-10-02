@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="first.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Jo-el Therapy Services</title>
+</head>
+
+<body>
+  <header>
+    <div class="tops">
+      <p>Jo-el Therapy services</p>
+      <!-- <nav class="navs"> -->
+      <p>
+        <a href="#section-target" class="ABOUT">ABOUT</a>
+        <a href="#section-target1" class="PROFILE">PROFILE</a>
+        <a href="#section-target2" class="CONTACT">CONTACT ME</a>
+      </p>
+      <!-- </nav> -->
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="banner-img-wrapper">
+      <img src="Therapy pic.jpg" alt="Massage banner" class="Massage-edit">
+      <h1 class="centered-title">Hi<span>,</span> My name is John Akpan.
+        <p class="ownership">Founder of Joel Therapy services</p>
+      </h1>
+    </div>
+  </section>
+
+  <h2 id="section-target">ABOUT US</h2>
+  <div class="about">
+    <p> At Jo-el Therapy Services, we understand that managing health challenges while balancing work and family
+      commitments can be overwhelming. As experienced physiotherapists, we priotize creating tailored fitness routines
+      that support long-term health, strenght and well-being.</p>
+    <p> Our Programs are designed to fit seamlesly into your busy schedule year-round. We offer a variety of therapeutic
+      services, including Aerobic exercises, Yoga and Massage Therapy for both adults and children.</p>
+    <br>
+    <p>If you are feeling Overwhelmed by stress, fatique or anxiety, our therapy sessions are designed to restore
+      balance and guide you towards a state of relaxation and comfort.</p>
+    <br>
+    <p>We specialize in therapeutic services for children with conditions such as Cerebral Palsy, Autism and other
+      health challenges. One of our key services is Brain Gym, which icludes specialized exercises such as: <br>
+    <ul>
+      <li> Thinking Cap: Enhances attention, Memory retention and cognitive processing.</li>
+      <li>Posiitive Point: Boost energy, confidence and promotes calmness.</li>
+      <li>Brain Tap: Encourages clear, relxed thinking</li>
+      <li>Brain button: Activates the brain's attention system for improved focus.</li>
+      <li>Oral Exercises: Strengthens muscles in the mouth and face, improving speech and oral health (including tongue,
+        jaw, lips, cheek exercises and bubble blowing).</li>
+      <li>Massage Therapy: Helps reduce muscle tension, improves circulation and increase flexibility.</li>
+    </ul>
+    </p>
+    <br>
+
+    <p>Our Professional team is dedicated to providing you with personalized care to promote overall health and well
+      being</p>
+  </div>
+
+  <section id="section-target1" class="profilistic">
+    <div class="profile-banner">
+      <img src="matox.jpg" alt="my personal banner" class="profile-img">
+      <span class="profile-edit">Physiotherapist</span>
+      <p> Hi, I am a physiotherapists, a Business Consultants and also a swiming instructor</p>
+      <p>i am passionate about helping others, empowering patients and improving quality of life</p>
+      <br>
+      <span class="icons">
+        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://wa.me/2348186593011"><i class="fa-brands fa-square-whatsapp"></i></a>
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      </span>
+
+    </div>
+  </section>
+
+  <div class="info" id="section-target2">
+    <h1>CONTACT</h1>
+  </div>
+  <section class="CONTAC">
+    <div class="shift">
+      <form id="my-form" action="https://formspree.io/f/manpngjp" method="post">
+        <!-- i will use formspree or nertify for the forms -->
+        <div>
+          <label for="username">Enter Fullname:</label>
+          <input type="text" id="Name" name="Name" required>
+          <br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+          <label for="phone-number">Phone number:</label>
+          <input type="phone-number" id="phone-number" name="number" placeholder="your phone number" required>
+          <br>
+        </div>
+
+        <h2>YOUR GENDER</h2>
+        <div class="gender">
+          <input type="radio" name="gender" value="male" required>Male
+          <input type="radio" name="gender" value="female" required>Female
+          <input type="radio" name="gender" value="other" required>Prefer not to say
+        </div>
+        <br><br>
+        <label for="questionaire"> What type of thereapy are you looking for:</label>
+        <select id="choice">
+          <option value="first">INDIVIDUAL (For myself)</option>
+          <option value="">COUPLES (For me and my partner)</option>
+          <option value=""> TEEN (For my child)</option>
+        </select>
+        <br><br>
+        <label for="bio">comment</label> <br>
+        <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
+    </div>
+    <br><br>
+    <input type="submit" value="submit the form" id="my-form-button" class="modal" required>
+    <p id="my-form-status"></p>
+    </form>
+    </div>
+    <!-- Modal for submission feedback -->
+    <div id="submission-modal" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <h2>Completed</h2>
+        <p>You have successfully submitted the form.</p>
+        <button id="close-modal-btn">Ok, Close</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div id="">
+      <p> &copy; 2025 Jo-el Therapy Services.</p>
+    </div>
+  </footer>
+  <script src="firstproject.js"></script>
+</body>
+
+
+</html>
