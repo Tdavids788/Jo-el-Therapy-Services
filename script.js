@@ -1,44 +1,67 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links.botton');
+    const navItems = document.querySelectorAll('.nav-links.botton a');
 
-let form = document.getElementById("my-form");
-let modal = document.getElementById("submission-modal");
-let closeModalBtn = document.getElementById("close-modal-btn");
+    // Toggle menu open/close on icon click
+    menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
 
-async function handleSubmit(event) {
-	event.preventDefault();
-	var status = document.getElementById("my-form-status");
-	var data = new FormData(event.target);
-	fetch(event.target.action, {
-		method: form.method,
-		body: data,
-		headers: {
-				'Accept': 'application/json'
-		}
-	}).then(response => {
-		if (response.ok) {
-			status.innerHTML = "Thanks for your submission!";
-			form.reset();
-			if (modal) {
-				modal.style.display = "flex";
-			}
-		} else {
-			response.json().then(data => {
-				if (Object.hasOwn(data, 'errors')) {
-					status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
-				} else {
-					status.innerHTML = "Oops! There was a problem submitting your form";
-				}
-			});
-		}
-	}).catch(error => {
-		status.innerHTML = "Oops! There was a problem submitting your form";
-	});
-}
+    // Function to close the menu
+    function closeMenu() {
+        if (navLinks.classList.contains('active')) {
+            menuIcon.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    }
 
-form.addEventListener("submit", handleSubmit);
+    // Close menu when a navigation link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', closeMenu);
+    });
 
-if (closeModalBtn && modal) {
-	closeModalBtn.addEventListener("click", function() {
-		modal.style.display = "none";
-	});
-}
+    // Form submission and modal logic
+    const form = document.getElementById('my-form');
+    const modal = document.getElementById('submission-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const status = document.getElementById('my-form-status');
+            const data = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    modal.style.display = 'flex'; // Show the modal
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form";
+                        }
+                    });
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form";
+            });
+        });
+    }
+
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+});
 
