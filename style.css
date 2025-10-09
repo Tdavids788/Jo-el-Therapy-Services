@@ -60,34 +60,20 @@ html {
     scroll-behavior: smooth;
 }
 header {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    box-sizing: border-box;
-    background: linear-gradient(90deg, #264653 0%, #ff9800 100%);
-    position: relative;
-    box-shadow: 0 4px 24px rgba(255, 152, 0, 0.10);
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    letter-spacing: 1px;
-    overflow-x: hidden; /* Ensure no horizontal scroll/gap */
+   display: flex;
+   white-space: nowrap;
+   padding: 0 2rem; /* Added padding for spacing from edges */
 }
 
 div.tops {
     width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    padding: 0 32px;
+    box-sizing: border-box;
 }
+
 
 div.tops p:first-child {
     font-size: 2rem;
@@ -98,13 +84,12 @@ div.tops p:first-child {
     text-shadow: 1px 1px 8px #ff9800;
 }
 
-div.tops p:last-child {
-    margin: 0;
+nav.nav-links {
     display: flex;
-    gap: 32px;
+    gap: 1rem; /* Adds space between the navigation links */
 }
 
-div.tops a {
+nav a { 
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
@@ -115,6 +100,7 @@ div.tops a {
     box-shadow: 0 2px 8px rgba(255, 152, 0, 0.08);
     background-color: #2a9d8f;
     backdrop-filter: blur(2px);
+    display: inline-block;
 }
 
 div.tops a:hover, div.tops a:focus {
@@ -123,11 +109,35 @@ div.tops a:hover, div.tops a:focus {
     box-shadow: 0 4px 16px rgba(255, 152, 0, 0.16);
 }
 
+.menu-icon {
+    display: none; /* Hidden by default on large screens */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Ensure it's above other header content */
+}
+.menu-icon .bar {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
 .about{
     margin-left: 20px;
 }
 
-
+.section-target {
+    text-align: center;
+}
 
 /* ...existing code... */
 
@@ -156,7 +166,7 @@ img{
     margin: 0;
     color: black;
     text-shadow: 2px 2px 8px #000;
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -165,10 +175,11 @@ span{
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    overflow-x: hidden; /* Prevent horizontal scroll/gap */
+    /* margin: 0;
+    padding: 0; */
+    width: 100%;
+    /* box-sizing: border-box;
+    overflow-x: hidden; */
     background-color: lightgray;
 }
 
@@ -379,40 +390,7 @@ div.info{
     margin: 20px 0;
 }
 
-@media screen and (max-width: 700px) {
-    header {
-        min-height: 60px;
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-    }
-
-    div.tops {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 12px;
-    }
-    div.tops p:last-child {
-        gap: 12px;
-        margin-top: 8px;
-    }
-    div.tops p:first-child {
-        font-size: 1.3rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    .CONTAC {
-        padding: 20px 8px 16px 8px;
-        max-width: 98vw;
-    }
-}
-@media screen and (max-width: 1200px) {
-    header {
-        width: 100vw;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-    body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
+.foot {
+    text-align: center;
+    padding: 12px 0;
 }
