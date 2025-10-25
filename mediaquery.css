@@ -1,12 +1,19 @@
+header {
+    margin-top: 1rem;  /* Adds space above the header */
+    padding: 1rem 2rem;  /* Adds internal spacing */
+}
+
 @media screen and (max-width: 1200px) {
     header {
         width: 100%; /* Changed from 100vw to 100% */
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
+        margin-top: 1rem;  /* Maintain spacing on smaller screens */
+        padding: 1rem 2rem;
     }
     body {
         width: 100%;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */ /* It's better to remove this to ensure the root cause is fixed */
     }
 }
 
@@ -80,5 +87,36 @@
     img {
         /* width: 500px; */ /* This might be too restrictive */
         height: auto; /* Maintain aspect ratio */
+    }
+    .centered-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    color: black;
+    text-shadow: 2px 2px 8px #000;
+    font-size: 20px;
+    text-align: center;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    /* Keyframes for shake animation */
+    @keyframes socialShake {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(-10deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(10deg); }
+        100% { transform: rotate(0deg); }
+    }
+
+    /* Apply animation only to social icons within profilistic section */
+    .profilistic .fa-square-instagram:hover,
+    .profilistic .fa-square-whatsapp:hover,
+    .profilistic .fa-square-facebook:hover {
+        animation: socialShake 0.5s ease-in-out;
+        cursor: pointer;
+        display: inline-block;
     }
 }
