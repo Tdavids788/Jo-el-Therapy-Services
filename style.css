@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Modal overlay styles */
 .modal-overlay {
     position: fixed;
@@ -367,19 +373,19 @@ div.info{
 } */
 
 .fa-square-instagram {
-    font-size: 24px;
+    font-size: 40px;
     background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .fa-square-whatsapp {
-    font-size: 24px;
+    font-size: 40px;
     color: #25d366;
 }
 
 .fa-square-facebook {
-    font-size: 24px;
+    font-size: 40px;
     color: #1877f2;
 }
 .icons{
