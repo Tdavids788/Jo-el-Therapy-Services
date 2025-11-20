@@ -289,7 +289,7 @@ div.info{
 
 .CONTAC input[type="text"],
 .CONTAC input[type="email"],
-.CONTAC input[type="phone-number"],
+.CONTAC input[type="tel"],
 .CONTAC select,
 .CONTAC textarea {
     width: 100%;
@@ -305,7 +305,7 @@ div.info{
 
 .CONTAC input[type="text"]:focus,
 .CONTAC input[type="email"]:focus,
-.CONTAC input[type="phone-number"]:focus,
+.CONTAC input[type="tel"]:focus,
 .CONTAC select:focus,
 .CONTAC textarea:focus {
     border: 2px solid #ff9800;
