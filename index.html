@@ -94,10 +94,10 @@
           <input type="email" id="email" name="email" required>
           <br><br>
           <label for="phone-number">Phone number:</label>
-          <input type="phone-number" id="phone-number" name="number" placeholder="your phone number" required>
+          <input type="tel" id="phone-number" name="phone" placeholder="your phone number" required>
           <br>
         </div>
-
+ 
         <h2>YOUR GENDER</h2>
         <div class="gender">
           <input type="radio" name="gender" value="male" required>Male
@@ -105,18 +105,20 @@
           <input type="radio" name="gender" value="other" required>Prefer not to say
         </div>
         <br><br>
-        <label for="questionaire"> What type of thereapy are you looking for:</label>
-        <select id="choice">
-          <option value="first">INDIVIDUAL (For myself)</option>
-          <option value="">COUPLES (For me and my partner)</option>
-          <option value=""> TEEN (For my child)</option>
+        <label for="questionaire"> What type of therapy are you looking for:</label>
+        <!-- Give the select a matching id and a name so Formspree will include it in submissions -->
+        <select id="questionaire" name="therapy_type" required>
+          <option value="" disabled selected>-- Select one --</option>
+          <option value="individual">INDIVIDUAL (For myself)</option>
+          <option value="couples">COUPLES (For me and my partner)</option>
+          <option value="teen">TEEN (For my child)</option>
         </select>
         <br><br>
         <label for="bio">Message:</label> <br>
         <textarea name="comments" id="comments" rows="4" cols="50" placeholder="Type in your message..."></textarea>
     </div>
     <br><br>
-    <input type="submit" value="submit the form" id="my-form-button" class="modal" required>
+    <input type="submit" value="submit the form" id="my-form-button" class="modal">
     <p id="my-form-status"></p>
     </form>
     </div>
